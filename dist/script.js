@@ -94,3 +94,16 @@ function activateLanguageToggle() {
     document.getElementsByClassName('tab-active')[0].click();
     console.log(document.getElementsByClassName('show-active'));
 }
+
+// LANGUAGE TOGGLE FUNCTIONALITY
+languageSwitch.addEventListener('click', function() {
+    if (languagetoggleIsOn === false) {
+        languageSwitch.classList.add('toggle-is-active');
+        languagetoggleIsOn = true;
+    } else {
+        languageSwitch.classList.remove('toggle-is-active');
+        languagetoggleIsOn = false;
+    }
+    activateLanguageToggle();
+    return languagetoggleIsOn;
+});
