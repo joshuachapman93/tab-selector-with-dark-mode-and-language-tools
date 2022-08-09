@@ -107,3 +107,17 @@ languageSwitch.addEventListener('click', function() {
     activateLanguageToggle();
     return languagetoggleIsOn;
 });
+
+// function to remove .show-active class & add to clicked
+function setNewActive(el) {
+    var contentBodies = document.getElementsByClassName('content-body');
+    for (var contentBody of contentBodies) {
+        contentBody.classList.remove('show-active');
+    }
+    document.getElementById(el.textContent.trim()).classList.add('show-active');
+
+    for (var tab of tabs) {
+        tab.classList.remove('tab-active');
+    }
+    el.classList.add('tab-active');
+}
