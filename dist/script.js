@@ -46,3 +46,16 @@ function turnOnDarkModeColors() {
         document.body.style.color = 'black';
     }
 }
+
+// DARK MODE TOGGLE FUNCTIONALITY
+darkModeSwitch.addEventListener('click', function() {
+    if (darkModetoggleIsOn === false) {
+        darkModeSwitch.style.justifyContent = 'flex-end';
+        darkModetoggleIsOn = true;
+    } else {
+        darkModeSwitch.style.justifyContent = 'flex-start';
+        darkModetoggleIsOn = false;
+    }
+    turnOnDarkModeColors();
+    return darkModetoggleIsOn;
+});
