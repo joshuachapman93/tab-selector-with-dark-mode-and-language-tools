@@ -207,3 +207,10 @@ body, article, section, section > *, .toggle-dot, .selector {
         font-size: 14px;
     }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    };
+}
