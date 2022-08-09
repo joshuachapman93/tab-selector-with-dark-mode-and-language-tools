@@ -59,3 +59,38 @@ darkModeSwitch.addEventListener('click', function() {
     turnOnDarkModeColors();
     return darkModetoggleIsOn;
 });
+
+// CHANGES ENGLISH TEXT TO SPANISH TEXT
+function activateLanguageToggle() {
+    if (languagetoggleIsOn === true) {
+        // Dark Mode Toggle Components
+        document.querySelector('#Toggle-Dark-Mode h3').innerHTML = 'Alternar modo oscuro';
+        document.querySelector('#Toggle-Dark-Mode p:first-child').innerHTML = 'Apagado';
+        document.querySelector('#Toggle-Dark-Mode p:last-child').innerHTML = 'En';
+        // Toggle Language Components
+        document.querySelector('#Toggle-Language h3').innerHTML = 'Alternar idioma';
+        // Tab Selectors
+        document.querySelector('#Tab-1').innerHTML = 'Opción Uno';
+        document.querySelector('#Tab-2').innerHTML = 'Opción Dos';
+        document.querySelector('#Tab-3').innerHTML = 'Opción Tres';
+        // Tab Content
+        document.querySelector('#English-Display').style.display = 'none';
+        document.querySelector('#Spanish-Display').style.display = 'block';
+    } else {
+        // Dark Mode Toggle Components
+        document.querySelector('#Toggle-Dark-Mode h3').innerHTML = 'Toggle Dark Mode';
+        document.querySelector('#Toggle-Dark-Mode p:first-child').innerHTML = 'Off';
+        document.querySelector('#Toggle-Dark-Mode p:last-child').innerHTML = 'On';
+        // Toggle Language Components
+        document.querySelector('#Toggle-Language h3').innerHTML = 'Toggle Language';
+        // Tab Selectors
+        document.querySelector('#Tab-1').innerHTML = 'Option One';
+        document.querySelector('#Tab-2').innerHTML = 'Option Two';
+        document.querySelector('#Tab-3').innerHTML = 'Option Three';
+        // Tab Content
+        document.querySelector('#Spanish-Display').style.display = 'none';
+        document.querySelector('#English-Display').style.display = 'block';
+    }
+    document.getElementsByClassName('tab-active')[0].click();
+    console.log(document.getElementsByClassName('show-active'));
+}
