@@ -121,3 +121,12 @@ function setNewActive(el) {
     }
     el.classList.add('tab-active');
 }
+
+// select .tab class, and loop through
+for (var tab of tabs) {
+    // add click listener to each tab
+    tab.addEventListener('click', function(e) {
+        setNewActive(e.currentTarget);
+        console.log(e.currentTarget);
+    });
+}
