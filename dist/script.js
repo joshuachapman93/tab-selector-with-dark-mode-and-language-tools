@@ -16,3 +16,10 @@ var darkPrimary = '#BB86FC';
 var darkPrimaryDark = '#3700B3';
 var darkSecondary = '#03DAC6';
 var darkErrorColor = '#CF6679';
+
+// GLOBAL VARIABLES
+var darkModeSwitch = document.querySelector('#Dark-Mode-Switch');
+var darkModetoggleIsOn = false;
+var languageSwitch = document.querySelector('#Language-Switch');
+var languagetoggleIsOn = false;
+var tabs = document.getElementsByClassName('tab');
